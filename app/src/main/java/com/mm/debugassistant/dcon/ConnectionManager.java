@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.text.TextUtils;
 
-import com.mm.debugassistant.dcon.improve.ConnManagerImp;
 import com.mm.debugassistant.utils.Constant;
 import com.mm.debugassistant.utils.NetworkUtils;
 import com.mm.debugassistant.utils.ProcessUtils;
@@ -23,7 +22,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 
-import io.reactivex.Observable;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
@@ -31,7 +29,6 @@ import okhttp3.HttpUrl;
 import timber.log.Timber;
 
 public class ConnectionManager {
-    private static final String TAG = ConnManagerImp.class.getSimpleName();
     private static ConnectionManager INSTANCE = new ConnectionManager();
     public Context context;
     private io.socket.client.Socket ioSocket;
