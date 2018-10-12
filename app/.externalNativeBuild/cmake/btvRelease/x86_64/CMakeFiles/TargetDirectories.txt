@@ -1,3 +1,0 @@
-D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/btvRelease/x86_64/CMakeFiles/vperf.dir
-D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/btvRelease/x86_64/CMakeFiles/edit_cache.dir
-D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/btvRelease/x86_64/CMakeFiles/rebuild_cache.dir
