@@ -1,0 +1,3 @@
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/mfcRelease/armeabi-v7a/CMakeFiles/vperf.dir
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/mfcRelease/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/mfcRelease/armeabi-v7a/CMakeFiles/rebuild_cache.dir

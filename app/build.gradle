@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.mm.debugassistant"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 10000
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+
+    signingConfigs {
+        androidConfig {
+            storePassword "android"
+            keyPassword "android"
+            keyAlias "platform"
+            storeFile file("../keystore/platform_debug.keystore.android")
+        }
+        mfcConfig {
+            storePassword "valormfc"
+            keyPassword "valormfc"
+            storeFile file("../keystore/platform.keystore.mfc")
+            keyAlias "platform"
+        }
+        btvConfig {
+            storePassword "btvbox"
+            keyPassword "btvbox"
+            storeFile file("../keystore/platform.keystore.btv")
+            keyAlias "platform"
+        }
+
+        flavorDimensions "platform"
+        productFlavors {
+            mfc {
+                dimension "platform"
+                signingConfig signingConfigs.mfcConfig
+            }
+
+            btv {
+                dimension "platform"
+                signingConfig signingConfigs.btvConfig
+            }
+
+            nornal {
+                dimension "platform"
+                signingConfig signingConfigs.androidConfig
+            }
+        }
+
+        applicationVariants.all { variant ->
+            def SEP = "_"
+            def flavor = variant.productFlavors[0].name
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def version = variant.versionName
+            def newApkName = "DebugAssistant" + SEP + flavor + SEP + buildType + SEP + version + ".apk"
+            variant.outputs.all {
+                outputFileName = newApkName
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.btvConfig
+        }
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.4.0'
+    compile 'com.android.support:cardview-v7:25.4.0'
+    compile 'com.android.support:recyclerview-v7:25.4.0'
+
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    // Toasty
+    compile 'com.github.GrenderG:Toasty:1.2.5'
+
+    //apache
+    compile 'org.apache.commons:commons-lang3:3.6'
+    compile 'commons-io:commons-io:2.5'
+
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+
+    // RxJava 2
+    compile "io.reactivex.rxjava2:rxjava:2.1.3"
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile ('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    compile "com.jakewharton.timber:timber:3.1.0"
+    testCompile 'junit:junit:4.12'
+}

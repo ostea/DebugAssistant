@@ -1,0 +1,3 @@
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/nornalRelease/arm64-v8a/CMakeFiles/vperf.dir
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/nornalRelease/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/nornalRelease/arm64-v8a/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mm.debugassistant.MainActivityFragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="121dp"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/func_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="选择功能"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_record_log"
+        style="@style/FuncItemView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/func_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="捕获日志"
+            android:textSize="20sp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_system_info"
+        style="@style/FuncItemView"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_record_log"
+        app:layout_constraintLeft_toRightOf="@+id/cv_record_log"
+        app:layout_constraintTop_toTopOf="@+id/cv_record_log"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="系统信息"
+            android:textSize="20sp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_remote_connect"
+        style="@style/FuncItemView"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_system_info"
+        app:layout_constraintLeft_toRightOf="@+id/cv_system_info"
+        app:layout_constraintTop_toTopOf="@+id/cv_system_info"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="远程连接"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_update_log"
+        style="@style/FuncItemView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_remote_connect"
+        app:layout_constraintLeft_toRightOf="@+id/cv_remote_connect"
+        app:layout_constraintTop_toTopOf="@+id/cv_remote_connect"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="升级日志"
+            android:textSize="20sp" />
+    </android.support.v7.widget.CardView>
+
+    <!--<TextView-->
+    <!--android:id="@+id/sample_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Hello World!"-->
+    <!--tools:layout_editor_absoluteX="442dp"-->
+    <!--tools:layout_editor_absoluteY="202dp" />-->
+
+</android.support.constraint.ConstraintLayout>

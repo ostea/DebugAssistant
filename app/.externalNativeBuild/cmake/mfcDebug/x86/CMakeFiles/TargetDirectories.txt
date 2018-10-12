@@ -1,0 +1,3 @@
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/mfcDebug/x86/CMakeFiles/vperf.dir
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/mfcDebug/x86/CMakeFiles/edit_cache.dir
+D:/testcode/DebugAssistant/app/.externalNativeBuild/cmake/mfcDebug/x86/CMakeFiles/rebuild_cache.dir

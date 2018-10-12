@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "D:\\testcode\\DebugAssistant\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\1806\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\testcode\\DebugAssistant\\app\\.externalNativeBuild\\cmake\\mfcRelease\\arm64-v8a --target clean"
+  ],
+  "libraries": {
+    "vperf-Release-arm64-v8a": {
+      "artifactName": "vperf",
+      "buildCommand": "C:\\Users\\1806\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\testcode\\DebugAssistant\\app\\.externalNativeBuild\\cmake\\mfcRelease\\arm64-v8a --target vperf",
+      "abi": "arm64-v8a",
+      "output": "D:\\testcode\\DebugAssistant\\app\\.externalNativeBuild\\cmake\\mfcRelease\\arm64-v8a\\vperf"
+    }
+  }
+}
